@@ -1,12 +1,23 @@
-/*
-   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   SLEPc - Scalable Library for Eigenvalue Problem Computations
-   Copyright (c) 2002-2021, Universitat Politecnica de Valencia, Spain
-
-   This file is part of SLEPc.
-   SLEPc is distributed under a 2-clause BSD license (see LICENSE).
-   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-*/
+/*!Author: Praveen Kalarickel Ramakrishnan
+ This program solves the generalized eigenvalue problem (GEP) for the matrix pencil (A, B)
+ The programs calls the subroutine "CompMatrixM" to read the input data files:
+ "real_parts.txt", "imag_parts.txt", "weight_matrix.txt", "zero_matrix.txt"
+ The output contains the eigen vectors and eigenvalues 
+ along with some additional information about the colver
+ Many parameters can be set from the commandline as mention in the SLEPc manual
+ (https://slepc.upv.es/)
+ 
+ Meanings of relevant variable names
+ A, B are the input matrices of the GEP
+ n is the size of the problem
+ nev is the number of requested eigenvalues
+ ncv is the size of the maximum size of the solution subspace
+ maxit is maximum number of iterations for convergence
+ tol is the value of tolerance level for convergence
+ nconv is the number of converged eigenvalues
+ kr and ki are used to retrieve the real and imaginary parts of an eigenvalue respectively
+ xr and xi are used to retrieve the real and imaginary parts of an eigenvector respectively
+ */
 
 static char help[] = "Standard symmetric eigenproblem corresponding to the Laplacian operator in 1 dimension.\n\n"
   "The command line options are:\n"

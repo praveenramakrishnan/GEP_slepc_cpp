@@ -1,6 +1,7 @@
 /*
 Author: Praveen Kalarickel Ramakrishnan
-Date: 2021-08-23
+This file contains the function "CompMatrixM" to read in the
+complex matrix from data files contating the real and imaginary parts
 */
 
 #include <cassert>
